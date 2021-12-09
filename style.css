@@ -15,8 +15,7 @@ body {
   background: url("bkg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* background: black; */
-
+  background: black;
   color: white;
   font-family: 'Raleway', sans-serif;
   font-family: 'Urbanist', sans-serif;
