@@ -1,98 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <title>Resume Generator</title>
 </head>
 <body>
 
-    <div class="container con" id="cv-form">
-  <div class="highlight">
-    <h1>Build Your Resume</h1>
-  </div>
-
-        <p class="text-center">  </p>
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="text-center">By Hardik Seth</p>
         <div class="row">
             <div class="col-md-6">
-              <div class="box">
 
-                <div class="minorhead">
-                  <h3>Personal Information</h3>
-                </div>
-                <div class="form-group newf">
+                <h3>Personal Information</h3>
+                <div class="form-group">
                     <label for="nameField">Your Name</label>
-                    <input type="text", id="nameField", placeholder="First and last name" class="form-control">
+                    <input type="text", id="nameField", placeholder="Enter Here" class="form-control">
                 </div>
-                <div class="form-group newf">
+                <div class="form-group">
                     <label for="contactField">Your Contact</label>
-                    <input type="text", id="contactField", placeholder="Enter multiple contacts" class="form-control">
+                    <input type="text", id="contactField", placeholder="Enter Here" class="form-control">
                 </div>
-                <div class="form-group newf">
+                <div class="form-group">
                     <label for="addressField">Your Address</label>
-                    <textarea id="addressField", placeholder="Address lines" class="form-control"></textarea>
+                    <textarea id="addressField", placeholder="Enter Here" class="form-control"></textarea>
                 </div>
 
-                <div class="mb-3">
-                  <label for="formFile" class="form-label">Upload photo</label>
-                  <input class="form-control" type="file" id="formFile">
+                <div class="form-group mt-3">
+                    <label for="">Select your photo</label>
+                    <input id="imgField" type="file" class="form-control">
                 </div>
-              </div>
-              <div class="box">
-                <div class="minorhead">
-                  <h3>Important links</h3>
-                </div>
-                <div class="form-group newf">
+
+                <p class="text-secondary my-3">Important links</p>
+                <div class="form-group">
                     <label for="fbField">Facebook</label>
-                    <input type="text", id="fbField", placeholder="Facebook handle" class="form-control">
+                    <input type="text", id="fbField", placeholder="Enter Here" class="form-control">
                 </div>
-                <div class="form-group newf">
+                <div class="form-group">
                     <label for="instaField">Instagram</label>
-                    <input type="text", id="instaField", placeholder="Instagram handle" class="form-control">
+                    <input type="text", id="instaField", placeholder="Enter Here" class="form-control">
                 </div>
-                <div class="form-group newf">
+                <div class="form-group">
                     <label for="linkedField">LinkedIn</label>
-                    <input type="text", id="linkedField", placeholder="LinkedIn profile" class="form-control">
+                    <input type="text", id="linkedField", placeholder="Enter Here" class="form-control">
                 </div>
-              </div>
+
             </div>
             <div class="col-md-6">
-    <div class="box">
-      <div class="minorhead">
-        <h3>Professional Information </h3>
 
-      </div>
-                <div class="form-group newf">
+                <h3>Professional Information</h3>
+                <div class="form-group">
                     <label for="">Objective</label>
                     <textarea id="objectiveField" placeholder="Enter Here" class="form-control" rows="5"></textarea>
                 </div>
-                <div class="form-group newf " id="we">
+                <div class="form-group" id="we">
                     <label for="">Work Experience</label>
-
-                    <div class="form-group input-group mb-3" >
-                      <textarea placeholder="Enter Here" class="form-control " rows="3"></textarea>
-                      <div class="container text-center mt-3" id="weAddButton">
-                        <button onclick="addNewWEField()" class="btn btn-outline-secondary fbutton" >Add</button>
-                      </div>  
+                    <textarea placeholder="Enter Here" class="form-control weField" rows="3"></textarea>
+                    <div class="container text-center mt-3" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
                     </div>
                 </div>
-
-                <div class="form-group newf" id="aq">
+                
+                <div class="form-group" id="aq">
                     <label for="">Academic Qualification</label>
-
-                    <div class="form-group input-group mb-3">
-                      <textarea placeholder="Enter Here" class="form-control " rows="3"></textarea>
-                      <div class="container text-center mt-3" id="aqAddButton">
-                        <button onclick="addNewAQField()" class="btn btn-outline-secondary fbutton">Add</button>
-                      </div>
+                    <textarea placeholder="Enter Here" class="form-control aqField" rows="3"></textarea>
+                    <div class="container text-center mt-3" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
                     </div>
                 </div>
 
@@ -102,17 +81,18 @@
 
         <div class="container text-center">
 
-            <button onclick="generateCV()" class="btn   btn-primary btn-lg gbutton">Generate CV</button>
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Gererate CV</button>
 
         </div>
-      </div>
+
     </div>
-<!--
+
     <div class="container" id="cv-template">
 
         <div class="row">
             <div class="col-md-4 text-center py-5 background">
 
+                <!-- first column -->
                 <img id="imgT" src="profile.jpg" alt="" class="img-fluid myimg">
 
                 <div class="containe">
@@ -128,26 +108,27 @@
             </div>
             <div class="col-md-8 py-5">
 
-
+                <!-- second column -->
                 <h1 id="nameT2" class="text-center" style="font-weight: 980;">Hardik Seth</h1>
-
                 
+                <!-- objective card -->
                 <div class="card mt-4">
                     <div class="card-header" style="background-color: aqua;">
                         <h3>Objective</h3>
                     </div>
                     <div class="card-body">
                         <p id="objectiveT">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Veritatis dolores doloremque maxime itaque dignissimos praesentium provident
-                            repellendus inventore quo deleniti voluptatum vel voluptas perferendis ea corporis
-                            ducimus recusandae error, aperiam perspiciatis quibusdam sed cupiditate nisi sapiente
-                            assumenda. Exercitationem, repellendus eius adipisci dolore mollitia dolores, explicabo
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Veritatis dolores doloremque maxime itaque dignissimos praesentium provident 
+                            repellendus inventore quo deleniti voluptatum vel voluptas perferendis ea corporis 
+                            ducimus recusandae error, aperiam perspiciatis quibusdam sed cupiditate nisi sapiente 
+                            assumenda. Exercitationem, repellendus eius adipisci dolore mollitia dolores, explicabo 
                             voluptatum illum perspiciatis molestias quas?
                         </p>
                     </div>
                 </div>
 
+                <!-- work experience -->
                 <div class="card mt-4">
                     <div class="card-header" style="background-color: aqua;">
                         <h3>Work Experience</h3>
@@ -161,7 +142,7 @@
                     </div>
                 </div>
 
-                
+                <!-- adademic qualification -->
                 <div class="card mt-4">
                     <div class="card-header" style="background-color: aqua;">
                         <h3>Academic Qualification</h3>
@@ -178,7 +159,7 @@
                     <button onclick="printCV()" class="btn background">Print CV</button>
                 </div>
 
-            </div>
+            </div>    
         </div>
 
     </div>
@@ -187,6 +168,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-  -->
+    
 </body>
 </html>
