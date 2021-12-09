@@ -11,3 +11,11 @@
 .background{
     background-color: aqua;
 }
+body {
+  background: url("bkg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: black; */
+
+  color: white;
+}
